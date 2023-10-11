@@ -5,7 +5,6 @@ import { drawImage } from "../lib/canvas/drawImage";
 import { drawLabel } from "../lib/canvas/drawLabel";
 import placeholder from "../static/images/placeholder.svg";
 import { Canvas } from "./Canvas";
-import { ColorSwatches } from "./ColorSelector";
 import {
   ExportWrapper,
   ParamWrapper,
@@ -14,13 +13,10 @@ import {
   Wizard,
   WizardWrapper,
 } from "./Containers";
-import { FAQ } from "./FAQ";
 import { Footer } from "./Footer";
 import { ImageSelector, Instructions } from "./ImageSelector";
-import { RangeSelectors } from "./RangeSelectors";
 import { RenderButton } from "./RenderButton";
 import { TextLabel } from "./TextLabel";
-import { FAQTitleWrapper } from "./FAQ";
 
 export const BadgeForge = () => {
   const {
@@ -77,15 +73,15 @@ export const BadgeForge = () => {
 
   return (
     <WizardWrapper>
-      <TitleWrapper>BadgeForge</TitleWrapper>
+      <TitleWrapper>I Stand With Israel</TitleWrapper>
       <SubTitleWrapper>
-        Create customized profile pictures with ease.
+        Show your support to Israel!
       </SubTitleWrapper>
       <Wizard>
         <ParamWrapper>
           <TextLabel />
-          <ColorSwatches />
-          <RangeSelectors />
+          {/*<ColorSwatches />*/}
+          {/*<RangeSelectors />*/}
         </ParamWrapper>
         <ExportWrapper>
           <Canvas>
@@ -95,8 +91,6 @@ export const BadgeForge = () => {
           <RenderButton />
         </ExportWrapper>
       </Wizard>
-      <FAQTitleWrapper>How to & FAQs</FAQTitleWrapper>
-      <FAQ />
       <Footer />
     </WizardWrapper>
   );

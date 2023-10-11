@@ -17,9 +17,10 @@ const DropdownOption = ({ option, onClick }: OptionProps) => {
 export const TextLabel = () => {
   const { label, setLabel } = useContext(BadgeForgeContext);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const MAX_CHARACTERS = 20;
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const validLength = e?.target.value.length <= 15;
+    const validLength = e?.target.value.length <= MAX_CHARACTERS;
     if (validLength) {
       setLabel(e?.target.value);
     }
@@ -36,14 +37,14 @@ export const TextLabel = () => {
       <DropdownBox
         onClick={toggleDropdown}
         title="type your own text or select from the presets"
-        $showAlert={label.length >= 15}
+        $showAlert={label.length >= MAX_CHARACTERS}
       >
         <LabelInput
           type="text"
           value={label}
-          placeholder="15 characters max."
+          placeholder={`${MAX_CHARACTERS} characters max.`}
           onChange={handleChange}
-          maxLength={15}
+          maxLength={MAX_CHARACTERS}
         />
         <ArrowDiv
           onClick={toggleDropdown}

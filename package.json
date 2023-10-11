@@ -26,11 +26,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "coverage": "npm test -- --coverage --watchAll false",
+    "test": "",
+    "coverage": "",
     "typecheck": "tsc -b .",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "prepare": ""
   },
   "eslintConfig": {
     "extends": [

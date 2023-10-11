@@ -1,6 +1,5 @@
 export const labelPresets: string[] = [
-  "#HIRING",
-  "#OPENFORWORK",
-  "#FREELANCING",
-  "#ONLEAVE",
+  "I STAND WITH ISRAEL",
+  "I SUPPORT ISRAEL",
+  "HAMAS IS ISIS",
 ];
